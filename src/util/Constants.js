@@ -32,6 +32,7 @@ const browser = exports.browser = typeof window !== 'undefined';
  * most impact is typically `TYPING_START`.
  * @property {WebsocketOptions} [ws] Options for the WebSocket
  * @property {HTTPOptions} [http] HTTP options
+ * @property {ColorResolvable} [defaultEmbedColor=0] What the default option in ColorResolvable resolves to.
  */
 exports.DefaultOptions = {
   apiRequestMethod: 'sequential',
@@ -47,6 +48,7 @@ exports.DefaultOptions = {
   restWsBridgeTimeout: 5000,
   disabledEvents: [],
   restTimeOffset: 500,
+  defaultEmbedColor: 0,
 
   /**
    * WebSocket options (these are left as snake_case to match the API)
